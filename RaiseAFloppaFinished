@@ -1,0 +1,43 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local RaiseAFloppa = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(50, 49, 49)
+Main.Position = UDim2.new(0.369807512, 0, 0.702199638, 0)
+Main.Size = UDim2.new(0, 361, 0, 176)
+
+Name.Name = "Name"
+Name.Parent = Main
+Name.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Name.Size = UDim2.new(0, 361, 0, 50)
+Name.Font = Enum.Font.SourceSans
+Name.Text = "BasedHub | Raise a Floppa"
+Name.TextColor3 = Color3.fromRGB(0, 0, 0)
+Name.TextSize = 40.000
+Main.Active = true
+Main.Draggable = true
+
+RaiseAFloppa.Name = "RaiseAFloppa"
+RaiseAFloppa.Parent = Main
+RaiseAFloppa.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+RaiseAFloppa.Position = UDim2.new(0, 0, 0.284090906, 0)
+RaiseAFloppa.Size = UDim2.new(0, 361, 0, 56)
+RaiseAFloppa.Font = Enum.Font.Nunito
+RaiseAFloppa.Text = "Raise a Floppa Loader"
+RaiseAFloppa.TextColor3 = Color3.fromRGB(0, 0, 0)
+RaiseAFloppa.TextSize = 39.000
+RaiseAFloppa.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Basenallity/BasedHubRaiseAFloppa/main/Floppa"))();
+end)
